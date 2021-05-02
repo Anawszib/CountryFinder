@@ -1,0 +1,21 @@
+<div class="uk-container-expand uk-height-viewport uk-flex uk-flex-middle uk-flex-center">
+  <div class="uk-container uk-container-large uk-flex-middle uk-flex-center uk-width-1-2">
+    <div>
+      <h3>Country search by</h3>
+    </div>
+    <div class="uk-margin-top">
+      <ul class="uk-flex-left" uk-tab>
+        <li (click)="changeActiveTab('0')" class="uk-active"><a href="#">Name</a></li>
+        <li (click)="changeActiveTab('1')"><a href="#">Capital City</a></li>
+        <li (click)="changeActiveTab('2')"><a href="#">Currency</a></li>
+      </ul>
+    </div>
+    <div class="uk-margin">
+      <input [(ngModel)]="searchingCriteria.searchParameter" class="uk-input" type="text">
+    </div>
+
+    <div class="uk-flex uk-flex-right uk-margin--top">
+      <a (click)="searchItem()" class="uk-button-primary uk-button uk-border-rounded">Search</a>
+    </div>
+  </div>
+</div>

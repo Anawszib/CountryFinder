@@ -1,0 +1,14 @@
+<div class="uk-container-expand uk-height-viewport uk-flex  ">
+  <div class="uk-margin-top uk-margin-left"><a href="" uk-icon="home"></a></div>
+  <div class="uk-container uk-container-xlarge uk-width-3-4 uk-margin-top">
+    <div class="uk-margin-top">
+      <h3>Country search by '{{searchingCriteria.searchParameter}}' {{searchingCriteria.searchBy}}</h3>
+    </div>
+    <div>
+      <ul class="uk-list uk-list-striped uk-link-text">
+        <li *ngFor="let country of countries"><a (click)="searchCountry(country.name)">{{country.name}}</a></li>
+      </ul>
+      <span *ngIf="hasNoResults" class="uk-text-danger">No results</span>
+    </div>
+  </div>
+</div>
